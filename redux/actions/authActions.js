@@ -15,7 +15,7 @@ const register = ({ firstname, lastname, mobile_no, email_id, password, confirm_
         Router.push('/signin');
         console.log(response.data.meta.message);
       })
-      .catch((err) => {
+      .catch((error) => {
         switch (error.response.status) {
           case 422:
           alert(error.response.data.meta.message);
